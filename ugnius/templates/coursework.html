@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+{% include 'fragments/head.html' %}
+
+<body>
+    <div class="container">
+        {% include 'fragments/header_nav.html' %}
+    </div>
+
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-12 blog-main">
+                <h3 class="pb-3 mb-4 font-italic border-bottom">
+                    {{ heading }}
+                </h3>
+
+                <table class="table table-condensed">
+                    <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Title</th>
+                        <th>Term</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>CS 362</td>
+                        <td>Computer Design</td>
+                        <td>Spring 2019</td>
+                    </tr>
+                    <tr>
+                        <td>CS 361</td>
+                        <td>Systems Programming</td>
+                        <td>Spring 2019</td>
+                    </tr>
+                    <tr>
+                        <td>CS 342</td>
+                        <td>Software Design</td>
+                        <td>Spring 2019</td>
+                    </tr>
+                    <tr>
+                        <td>CS 341</td>
+                        <td>Programming Language Design and Implementation</td>
+                        <td>Spring 2019</td>
+                    </tr>
+                    <tr>
+                        <td>CS 301</td>
+                        <td>Languages and Automata</td>
+                        <td>Fall 2018</td>
+                    </tr>
+                    <tr>
+                        <td>CS 261</td>
+                        <td>Machine Organization</td>
+                        <td>Fall 2018</td>
+                    </tr>
+                    <tr>
+                        <td>CS 251</td>
+                        <td>Data Structures</td>
+                        <td>Fall 2018</td>
+                    </tr>
+                    <tr>
+                        <td>CS 211</td>
+                        <td>Programming Practicum</td>
+                        <td>Fall 2018</td>
+                    </tr>
+                    <tr>
+                        <td>CS 151</td>
+                        <td>Mathematical Foundations of Computing</td>
+                        <td>Spring 2018</td>
+                    </tr>
+                    <tr>
+                        <td>CS 141</td>
+                        <td>Program Design II</td>
+                        <td>Spring 2018</td>
+                    </tr>
+                    <tr>
+                        <td>CS 111</td>
+                        <td>Program Design I</td>
+                        <td>Fall 2017</td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div><!-- /.blog-main -->
+
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    {% include 'fragments/footer.html' %}
+
+</body>
+</html>

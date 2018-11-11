@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+{% include 'fragments/head.html' %}
+
+<body>
+    <div class="container">
+        {% include 'fragments/header_nav.html' %}
+    </div>
+
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-12 blog-main">
+                <h3 class="pb-3 mb-4 font-italic border-bottom">
+                    {{ heading }}
+                </h3>
+                <div class="row">
+                    <div class="col-md-12">
+                    <table class="table table-hover">
+                    <!-- <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Title</th>
+                        <th>Term</th>
+                    </tr>
+                    </thead> -->
+                    <tbody>
+                    <tr>
+                        <td><img src="../static/images/jpmc.png" class="mx-auto d-block" alt="Cinque Terre"></td>
+                        <td>Software Engineer Intern | J.P. Morgan Chase</td>
+                        <td>Summer 2019</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../static/images/uic.png" class="mx-auto d-block" alt="Cinque Terre"></td>
+                        <td>Teaching Assistant | UIC Computer Science Dept.</td>
+                        <td>Fall 2018</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../static/images/column.png" class="mx-auto d-block" alt="Cinque Terre"></td>
+                        <td>Consulting Services Assistant | Column Information Security</td>
+                        <td>Summer 2018</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../static/images/boa.png" class="mx-auto d-block img-rounded" alt="Cinque Terre"></td>
+                        <td>Client Service Representative | Bank of America</td>
+                        <td>July 2015 - August 2017</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../static/images/jewelosco.png" class="mx-auto d-block img-rounded" alt="Cinque Terre"></td>
+                        <td>Front-End Service/Grocery Clerk | Jewel Osco</td>
+                        <td>September 2013 - July 2015</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+                </div>
+
+        </div><!-- /.blog-main -->
+
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    {% include 'fragments/footer.html' %}
+
+</body>
+</html>
