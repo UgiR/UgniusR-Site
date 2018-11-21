@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+{% include 'fragments/head.html' %}
+
+<body>
+    <div class="container">
+        {% include 'fragments/header_nav.html' %}
+    </div>
+
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-12 blog-main">
+                <h2 class="pb-3 mb-4 font-italic border-bottom">{{ heading }}</h2>
+
+                <h2>Life</h2>
+                <p>Ugnius Rumsevicius was born in Lithuania in 1997.</p>
+
+                <h3>Interests</h3>
+                <p>C/C++</p>
+                <p>Back-end</p>
+                <p>Music<</p>
+            </div>
+
+        </div><!-- /.blog-main -->
+
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    {% include 'fragments/footer.html' %}
+
+</body>
+</html>

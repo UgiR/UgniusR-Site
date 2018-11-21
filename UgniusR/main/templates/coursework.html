@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+{% include 'fragments/head.html' %}
+
+<body>
+    <div class="container">
+        {% include 'fragments/header_nav.html' %}
+    </div>
+
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-12 blog-main">
+                <h3 class="pb-3 mb-4 font-italic border-bottom">
+                    {{ heading }}
+                </h3>
+
+                <table class="table table-condensed">
+                    <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Title</th>
+                        <th>Term</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for course in courses %}
+                        <tr>
+                            <td>{{ course['Course'] }}</td>
+                            <td>{{ course['Title'] }}</td>
+                            <td>{{ course['Term'] }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+        </div><!-- /.blog-main -->
+
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    {% include 'fragments/footer.html' %}
+
+</body>
+</html>

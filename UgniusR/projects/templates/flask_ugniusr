@@ -1,0 +1,25 @@
+<h2>Purpose</h2>
+<p>
+The purpose of the site is to have an open-ended platform to experiment and showcase/document new projects. The full
+source code can be found through the link on the bottom of this page.
+</p>
+
+<h2>Technology</h2>
+<p>
+The site is built on Linux, Apache, mySQL, and Python (Flask).
+</p>
+
+<h3>Why not MEAN?</h3>
+<p>
+While I acknowledge the existence and importance of the modern Javascript options (Angular/Node.js), my priority has
+never been front-end development. For the purpose of this project, the current technology is sufficient and allows
+me to become familiar with the fundamentals.
+
+<p>
+I find it is the best use of my time to expand my knowledge of my current interests. If someday my interest in Javascript
+frameworks grows, this website would very likely be the target of experimentation.
+</p>
+
+<h2>Structure</h2>
+
+<h2>API</h2>
