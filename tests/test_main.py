@@ -17,7 +17,22 @@ class ViewsEndpointsOK(unittest.TestCase):
 
     # TESTS
 
-    def test_load_coursework(self):
-        with app.app_context():
-            r = self.app.get('/coursework')
-            self.assertEqual(r.status_code, 200)
+
+
+    def test_projects(self):
+        r = self.app.get('/projects')
+        self.assertEqual(r.status_code, 200)
+
+    def test_library(self):
+        r = self.app.get('/library')
+        self.assertEqual(r.status_code, 200)
+
+    def test_coursework(self):
+        r = self.app.get('/coursework')
+        self.assertEqual(r.status_code, 200)
+
+    def test_experience(self):
+        r = self.app.get('/experience')
+        self.assertEqual(r.status_code, 200)
+
+unittest.main()

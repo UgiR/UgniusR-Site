@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+{% include 'fragments/head.html' %}
+
+<body>
+    <div class="container">
+        {% include 'fragments/header_nav.html' %}
+    </div>
+
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-12 blog-main">
+                <h3 class="pb-3 mb-4 font-italic border-bottom">
+                    {{ heading }}
+                </h3>
+
+                <h2>Purpose</h2>
+                <p>
+                The purpose of the site is to have an open-ended platform to experiment and showcase/document new projects. The full
+                source code can be found through the link on the bottom of this page.
+                </p>
+
+                <h2>Technology</h2>
+                <p>
+                The site is built using the Flask Framework and deployed on Ubuntu using uWSGI and Nginx.
+                </p>
+
+                <h3>Javascript Framework?</h3>
+                <p>
+                While I acknowledge the existence and importance of the modern Javascript options (Angular/Node.js), my priority has
+                never been front-end development. For the purpose of this project, the current technology is sufficient and allows
+                me to become familiar with the fundamentals.
+
+                <p>
+                I find it is the best use of my time to expand my knowledge of my current interests. If someday my interests shift to Javascript
+                frameworks and front-end development, this website would very likely be the target of experimentation.
+                </p>
+
+                <h3>CSS</h3>
+                <p>
+                The site uses the Bootstrap library and is based on an example page provided by Bootstrap.
+                </p>
+
+                <h2>Structure</h2>
+                <p>
+                This project is structured to allow for future expansion by using modular components called Blueprints.
+                There are currently three primary Blueprints: 'main', 'projects', and 'api'.
+                </p>
+
+                <h2>API</h2>
+                <p>
+                The API provides some resources that are used throughout the program. The API can be access through
+                '/api/public'. In the future, I intend to expand this API to include authentication features. The
+                resources the API provides are not very useful outside of the context of this site, but developing it
+                provides some exposure to REST concepts.
+                </p>
+
+        </div><!-- /.blog-main -->
+
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    {% include 'fragments/footer.html' %}
+
+</body>
+</html>

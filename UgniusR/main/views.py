@@ -10,12 +10,8 @@ def index():
     return render_template('index.html')
 
 
-@main_bp.route('/about')
-def about():
-    return render_template('about.html', heading='About')
-
-
-@main_bp.route('/library')
+# TODO
+#@main_bp.route('/library')
 def library():
     return render_template('index.html')
 
@@ -33,11 +29,6 @@ def coursework():
 @main_bp.route('/experience')
 def experience():
     return render_template('experience.html', heading='Experience')
-
-
-@main_bp.route('/testapi')
-def testapi():
-    return api.courses()
 
 
 @main_bp.errorhandler(404)

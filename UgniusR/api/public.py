@@ -1,7 +1,8 @@
-from flask import Blueprint, Response, jsonify, url_for
+from flask import Blueprint, Response, jsonify
 import csv
 import os
-from UgniusR.api import public_api_bp
+
+public_api_bp = Blueprint('public_api', __name__, url_prefix='/api/public')
 
 
 @public_api_bp.route('/courses')
@@ -11,6 +12,5 @@ def courses():
         with open(dir_path + '/resources/coursework.csv', 'r') as file:
             reader = csv.DictReader(file)
             return jsonify(list(reader))
-    except IOError as e:
-        print(e)
+    except IOError:
         return Response(status=404)
