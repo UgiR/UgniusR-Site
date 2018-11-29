@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint
+from flask import render_template, Blueprint, request
 from UgniusR.api import public as api
 import json
 
@@ -11,9 +11,9 @@ def index():
 
 
 # TODO
-#@main_bp.route('/library')
+@main_bp.route('/library')
 def library():
-    return render_template('index.html')
+    return render_template('ingggdex.html')
 
 
 @main_bp.route('/coursework')
