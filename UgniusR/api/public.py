@@ -1,4 +1,5 @@
 from flask import Blueprint, Response, jsonify
+from sentry_sdk import capture_exception
 import csv
 import os
 
@@ -12,5 +13,6 @@ def courses():
         with open(dir_path + '/resources/coursework.csv', 'r') as file:
             reader = csv.DictReader(file)
             return jsonify(list(reader))
-    except IOError:
+    except IOError as e:
+        capture_exception(e)
         return Response(status=404)
