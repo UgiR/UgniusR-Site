@@ -1,31 +1,20 @@
-import os
-from dotenv import load_dotenv
-from flask import Flask, request
+from flask import Flask
 import sentry_sdk
 from sentry_sdk.integrations.flask import FlaskIntegration
 
+from config import Config
 from UgniusR.api import public_api_bp
 from UgniusR.projects import projects_bp
 from UgniusR.main import main_bp
-from config import Config
 
 # Main objects
 app = Flask(__name__)
-
-# Load environment variables
-basedir = os.path.abspath(os.path.dirname(__file__))
-load_dotenv(os.path.join(basedir, '.env'))
-
-# Set up Sentry
-if 'SENTRY_DSN' in os.environ:
-    SENTRY_DSN = os.environ['SENTRY_DSN']
-    sentry_sdk.init(SENTRY_DSN, integrations=[FlaskIntegration()], environment=os.environ['ENVIRONMENT'])
-
-# Set config
 app.config.from_object(Config)
+
+# Set up Sentry error reporting
+sentry_sdk.init(app.config['SENTRY_DSN'], integrations=[FlaskIntegration()], environment=app.config['ENVIRONMENT'])
 
 # Register blueprints
 app.register_blueprint(public_api_bp)
 app.register_blueprint(projects_bp)
 app.register_blueprint(main_bp)
-
