@@ -2,12 +2,12 @@ import os
 import sys
 from dotenv import load_dotenv
 
-basedir = os.path.abspath(os.path.dirname(__file__))
-
 
 class Config:
 
     # Load environment variables
+    basedir = os.path.abspath(os.path.dirname(__file__))
+
     load_dotenv(os.path.join(basedir, '.env'))
 
     try:
