@@ -12,7 +12,7 @@ app = Flask(__name__)
 app.config.from_object(Config)
 
 # Set up Sentry error reporting
-sentry_sdk.init(app.config['SENTRY_DSN'], integrations=[FlaskIntegration()], environment=app.config['ENVIRONMENT'])
+sentry_sdk.init(app.config['SENTRY_DSN'], integrations=[FlaskIntegration()], environment=app.config['ENV'])
 
 # Register blueprints
 app.register_blueprint(public_api_bp)

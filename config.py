@@ -12,7 +12,7 @@ class Config:
 
     try:
 
-        ENVIRONMENT = os.environ['ENVIRONMENT']
+        ENV = os.environ['ENVIRONMENT']
 
         SENTRY_DSN = os.environ['SENTRY_DSN']
 
