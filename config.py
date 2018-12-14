@@ -10,6 +10,8 @@ class Config:
 
     load_dotenv(os.path.join(basedir, '.env'))
 
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'main.db')
+
     try:
 
         ENV = os.environ['ENVIRONMENT']
