@@ -15,3 +15,11 @@ class Course(db.Model):
 
     def __repr__(self):
         return '<Course {}>'.format(self.course)
+
+
+class Project(db.Model):
+    __tablename__ = 'Projects'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(64), index=True, unique=True)
+    category = db.Column(db.String(64))
+    description = db.Column(db.String(500))
